@@ -24,7 +24,7 @@ Prop2[2].Name = John
 ```
 ## Installation
 ```
-Install-Package S4b.JsonExtensionsNET
+Install-Package S4B.JsonExtensionsNET
 ```
 ## Examples of usage
 ```
