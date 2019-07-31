@@ -1,0 +1,13 @@
+language: csharp
+solution: S4B.JsonExtensionsNET.sln
+mono: none
+dotnet: 2.1.700
+script:
+    - dotnet test -c Release
+    - dotnet publish -c Release -o out
+deploy:
+    skip_cleanup: true
+    provider: script
+    script: chmod +x ./deploy.sh && ./deploy.sh $NUGET_API_KEY 1.0.$TRAVIS_BUILD_NUMBER
+    on:
+        branch: master
