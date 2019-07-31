@@ -1,7 +1,7 @@
 language: csharp
 solution: S4B.JsonExtensionsNET.sln
 mono: none
-dotnet: 2.1.700
+dotnet: 2.2.203
 script:
     - dotnet test -c Release
     - dotnet publish -c Release -o out
