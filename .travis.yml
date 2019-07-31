@@ -1,8 +1,11 @@
 language: csharp
 solution: S4B.JsonExtensionsNET.sln
 mono: none
-dotnet: 2.1.700
+sudo: required
+dist: xenial
+dotnet: 2.2
 script:
+    - dotnet restore
     - dotnet test -c Release
     - dotnet publish -c Release -o out
 deploy:
